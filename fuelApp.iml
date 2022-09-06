@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/Builder Design Pattern" isTestSource="false" packagePrefix="com.sandun" />
+      <sourceFolder url="file://$MODULE_DIR$/Chain Responsibility Pattern" isTestSource="false" packagePrefix="com.sandun" />
+      <sourceFolder url="file://$MODULE_DIR$/Memento Design Pattern" isTestSource="false" packagePrefix="com.sandun" />
+      <sourceFolder url="file://$MODULE_DIR$/Prototype Design Pattern" isTestSource="false" packagePrefix="com.sandun" />
+      <sourceFolder url="file://$MODULE_DIR$/Reverse a Linked List" isTestSource="false" packagePrefix="com.sandun" />
+      <sourceFolder url="file://$MODULE_DIR$/Singleton Pattern" isTestSource="false" packagePrefix="com.sandun" />
+      <sourceFolder url="file://$MODULE_DIR$/Whether a Palindrome or not" isTestSource="false" packagePrefix="com.sandun" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>
