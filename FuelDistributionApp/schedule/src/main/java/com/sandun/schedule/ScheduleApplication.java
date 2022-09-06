@@ -1,13 +1,11 @@
-package com.sandun.order;
+package com.sandun.schedule;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-//main method for Order Service
-public class OrderApplication {
+public class ScheduleApplication {
     public static void main(String[] args) {
-        SpringApplication.run(OrderApplication.class, args);
+        SpringApplication.run(ScheduleApplication.class, args);
     }
-
 }

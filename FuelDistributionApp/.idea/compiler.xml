@@ -6,6 +6,9 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="schedule" />
+        <module name="allocation" />
+        <module name="dispatch" />
         <module name="order" />
       </profile>
     </annotationProcessing>

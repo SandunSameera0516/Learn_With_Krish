@@ -1,0 +1,20 @@
+server:
+  port: 8083
+spring:
+  application:
+    name: dispatch
+  datasource:
+    username: 'postgres'
+    url: jdbc:postgresql://localhost:5432/dispatch
+    password: '123456'
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: 'true'
+        globally_quoted_identifiers: 'true'
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: 'true'
+    kafka:
+      bootstrap-servers: localhost:9092

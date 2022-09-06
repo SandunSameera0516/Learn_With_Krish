@@ -1,13 +1,13 @@
-package com.sandun.order;
+package com.sandun.allocation;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-//main method for Order Service
-public class OrderApplication {
+public class AllocationApplication {
     public static void main(String[] args) {
-        SpringApplication.run(OrderApplication.class, args);
+
+        SpringApplication.run(AllocationApplication.class, args);
     }
 
 }
