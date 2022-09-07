@@ -5,8 +5,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.*;
-import java.time.LocalDateTime;
+import javax.persistence.Id;
 import java.util.ArrayList;
 
 @Data
@@ -21,4 +20,5 @@ public class Schedule {
     private String status;
     private ArrayList<Integer> createdAt;
     private ArrayList<Integer>  scheduleTime;
+    
 }
