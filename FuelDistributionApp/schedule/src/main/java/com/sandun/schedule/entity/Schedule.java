@@ -30,4 +30,5 @@ public class Schedule {
     private String status;
     private LocalDateTime createdAt;
     private LocalDateTime scheduleTime;
+    
 }
