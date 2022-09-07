@@ -19,7 +19,7 @@ import java.util.Map;
 
 @Configuration
 public class KafkaConsumerConfig {
-    //    holds Bootstrap server URL
+    //holds Bootstrap server URL
     @Value("localhost:9092")
     private String bootstrapServers;
 
