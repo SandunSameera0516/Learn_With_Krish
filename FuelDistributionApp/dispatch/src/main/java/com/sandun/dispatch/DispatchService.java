@@ -1,10 +1,10 @@
 package com.sandun.dispatch;
 
+import com.google.gson.Gson;
 import com.sandun.dispatch.entity.Dispatch;
 import com.sandun.dispatch.entity.Schedule;
-import com.google.gson.Gson;
 import lombok.AllArgsConstructor;
-import org.springframework.context.annotation.Bean;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Service;
 
@@ -13,6 +13,7 @@ import java.util.List;
 
 @Service
 @AllArgsConstructor
+@Slf4j
 public class DispatchService {
     //todo: Need To Find a Way To make the Order Dispatch on the Scheduled date
     private final DispatchRepository dispatchRepository;
@@ -22,12 +23,12 @@ public class DispatchService {
         Gson g = new Gson();
         Schedule a = g.fromJson(data,Schedule.class);
 
-        //Getting the Scheduled Date
+        //Get Scheduled Date
         List<Integer> scdate = a.getScheduleTime();
         LocalDateTime scheduledTime =LocalDateTime.of(scdate.get(0),scdate.get(1),scdate.get(2), scdate.get(3),scdate.get(4),scdate.get(5),scdate.get(6));
         System.out.println(scheduledTime);
-        //Checking Whether the order can be dispatched or not
-        //Updating the Status According to the Check
+        //Check Whether the order can be dispatched or not
+        //Update Status According to the Check
         Boolean isDispatched = isDispatched(scheduledTime);
 
         Dispatch dispatch = Dispatch.builder()
@@ -52,7 +53,7 @@ public class DispatchService {
         if (isDispatched == true){
             return "Order Dispatched";
         }else {
-            return "Order Not Dispatched";
+            return "Order is not Dispatched";
         }
     }
 }

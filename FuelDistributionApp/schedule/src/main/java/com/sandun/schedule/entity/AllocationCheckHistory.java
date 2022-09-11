@@ -8,7 +8,7 @@ import lombok.NoArgsConstructor;
 import javax.persistence.Id;
 import java.util.ArrayList;
 
-// Allocation Class where we define our variables of the class
+// Define variables in Allocation Class
 @Data
 @Builder
 @AllArgsConstructor

@@ -7,6 +7,8 @@ import org.springframework.messaging.Message;
 import org.springframework.messaging.support.MessageBuilder;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDateTime;
+
 @Service
 @AllArgsConstructor
 public class OrderService {
@@ -16,17 +18,18 @@ public class OrderService {
     public void placeOrder(OrderRequest orderRequest) {
 
         Order order = Order.builder()
-                .status(orderRequest.status())
+                .status("Order is created")
+                .createdAt(LocalDateTime.now())
                 .allocAmount(orderRequest.allocAmount())
                 .build();
         //todo: check the allocation is available or not
-        //sending the order details to allocation service to check weather stock is available or not
+        //send order details to allocation service to check weather stock is available or not
         Message<Order> message = MessageBuilder.withPayload(order)
                 .setHeader(KafkaHeaders.TOPIC,"mainTopic")
                 .build();
-        //  Storing to database
+        //  Store to database
         orderRepository.save(order);
-        //  Sending to kafka Topic
+        //  Send to kafka Topic
         kafkaTemplate.send(message);
     }
 

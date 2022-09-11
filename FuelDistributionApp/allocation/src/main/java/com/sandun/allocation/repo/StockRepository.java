@@ -3,13 +3,11 @@ package com.sandun.allocation.repo;
 import com.sandun.allocation.entity.Stock;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
-import org.springframework.data.repository.NoRepositoryBean;
 import org.springframework.stereotype.Repository;
 
-import java.util.Collection;
 import java.util.List;
 
-//Repo For Stock Table
+//Stock Table Repository
 @Repository
 public interface StockRepository extends JpaRepository<Stock,Integer> {
 

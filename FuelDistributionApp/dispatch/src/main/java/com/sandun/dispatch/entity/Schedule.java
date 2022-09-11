@@ -20,5 +20,5 @@ public class Schedule {
     private String status;
     private ArrayList<Integer> createdAt;
     private ArrayList<Integer>  scheduleTime;
-    
+
 }

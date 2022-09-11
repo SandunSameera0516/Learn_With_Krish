@@ -7,12 +7,13 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
-// Stock Entity
+
 @Data
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity(name = "Stock")
+// Stock Class
 public class Stock {
     @Id
     @SequenceGenerator(

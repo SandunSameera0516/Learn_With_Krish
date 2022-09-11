@@ -8,7 +8,7 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 import java.time.LocalDateTime;
 
-//Allocation Class where we define our variables of the class
+
 @Data
 @Builder
 @AllArgsConstructor

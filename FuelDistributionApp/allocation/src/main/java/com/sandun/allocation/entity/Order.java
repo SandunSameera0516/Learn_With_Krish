@@ -4,17 +4,15 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.hibernate.annotations.Type;
-import org.springframework.messaging.handler.annotation.Payload;
 
-import javax.persistence.*;
+import javax.persistence.Id;
 
-// order class
+
 @Data
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-//@Entity(name = "Order")
+//order class
 public class Order {
     @Id
     private Integer orderId;

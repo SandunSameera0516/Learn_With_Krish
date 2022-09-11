@@ -31,7 +31,6 @@ public class KafkaProducerConfig {
         return props;
     }
 
-    //Producer Factory which responsible for creating producer instances
     //todo: Change String to Object Which we want to send
 
     @Bean
