@@ -1,0 +1,13 @@
+<div class="wrap">
+    <form (ngSubmit)="createOrder(title)">
+      <label class="heading">Allocation Amount</label><br />
+      <input type="text" name="Allocation Amount" #title /><br />
+      <input
+        class="button"
+        type="submit"
+        name="Create Order"
+        value="Create Order"
+        (click)="reloadPage()"
+      /><br />
+    </form>
+  </div>

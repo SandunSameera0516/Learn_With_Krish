@@ -1,0 +1,31 @@
+<table>
+    <thead>
+      <tr>
+        <th>Dispatch ID</th>
+        <th>Order ID</th>
+        <th>Allocation Amount</th>
+        <th>Created At</th>
+        <th>Dispatch Scheduled Date</th>
+        <th>Status</th>
+        <th>Dispatch Order</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let order of orders">
+        <td data-column="Dispatch ID">{{order.dispatchId}}</td>
+        <td data-column="Order ID" #orderId>{{order.orderId}}</td>
+        <td data-column="Allocation Amount">{{order.allocAmount}}</td>
+        <td data-column="Created At">{{order.createdAt}}</td>
+        <td data-column="Dispatch Scheduled Date">{{order.dispatchAt}}</td>
+        <td data-column="Status">{{order.status}}</td>
+        <td data-column="Dispatch Order">
+            <button class="false-button" *ngIf="order.isDispatched==false" (click)="updateOrder(order.dispatchId)">
+                {{order.isDispatched}}
+            </button>
+            <button class="true-button" *ngIf="order.isDispatched==true">
+                {{order.isDispatched}}
+            </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>

@@ -1,0 +1,44 @@
+<div id="root">
+    <div class="container pt-5">
+      <div class="row">
+        <div class="c-dashboardInfo column" *ngFor="let order of orders">
+          <div class="wrap">
+            <h4
+              class="heading heading5 hind-font medium-font-weight c-dashboardInfo__title"
+            >
+              Order ID : {{ order.orderId }}
+            </h4>
+            <p>Allocation Amount</p>
+            <span class="hind-font caption-12 c-dashboardInfo__count">{{
+              order.allocAmount
+            }}</span>
+            <span>Status : {{ order.status }}</span>
+            <a href="#popup{{ order.orderId }}">View Details</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="popup{{ order.orderId }}" class="overlay" *ngFor="let order of orders">
+    <div class="popup">
+      <div class="cont">
+        <div class="pricing-table table1">
+          <div class="header">
+            <div class="orderid">
+              <span><strong class="for-head">Order ID : </strong>{{ order.orderId }}</span>
+            </div>
+            <div class="title">
+              <strong class="for-head">Alloaction Amount : </strong>{{ order.allocAmount }}
+            </div>
+          </div>
+          <ul class="list">
+            <li><strong>Status :</strong> {{ order.status }}</li>
+            <div class="border"></div>
+            <li><strong>Created At :</strong> {{ order.createdAt }}</li>
+            <div class="border"></div>
+          </ul>
+          <a class="close" href="#">&times;</a>
+        </div>
+      </div>
+    </div>
+  </div>
